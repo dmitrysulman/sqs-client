@@ -41,7 +41,7 @@ class ApiController(
         val message = sqsTemplate.receiveAsync(from, Map::class.java).await()
 
         return message.getOrNull()?.let {
-            val messageId = it.headers.get(MessageHeaders.ID) as UUID
+            val messageId = it.headers[MessageHeaders.ID] as UUID
             val messagePayload = it.payload as Map<String, Any>
             log.info { "Received message [$messageId]" }
             mapOf(messageId to messagePayload)
