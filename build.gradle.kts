@@ -1,7 +1,7 @@
 plugins {
     kotlin("jvm") version "2.2.0"
     kotlin("plugin.spring") version "2.2.0"
-    id("org.springframework.boot") version "3.5.3"
+    id("org.springframework.boot") version "3.5.4"
     id("io.spring.dependency-management") version "1.1.7"
 }
 
@@ -28,7 +28,7 @@ dependencies {
     implementation("io.github.oshai:kotlin-logging:7.0.7")
     implementation("org.springframework.boot:spring-boot-starter-webflux")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
-    implementation("software.amazon.awssdk:sqs:2.31.78")
+    implementation("software.amazon.awssdk:sqs:2.32.12")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
